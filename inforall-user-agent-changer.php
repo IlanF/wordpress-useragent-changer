@@ -2,7 +2,7 @@
 /*
  * Plugin Name:       Default Useragent Changer
  * Plugin URI:        https://ilanfirsov.me/wordpress/useragent-changer
- * Description:       Changes default WordPress useragent.
+ * Description:       Allows to set a custom useragent and override the default one WordPress is using for HTTP requests.
  * Version:           1.0.0
  * Author:            Ilan Firsov
  * Author URI:        https://ilanfirsov.me/
