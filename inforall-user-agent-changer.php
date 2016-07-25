@@ -1,15 +1,31 @@
 <?php
 /*
- Plugin Name:       Default Useragent Changer
- Plugin URI:        https://ilanfirsov.me/wordpress/useragent-changer
- Description:       Changes default WordPress useragent.
- Version:           1.0.0
- Author:            Ilan Firsov
- Author URI:        https://ilanfirsov.me/
- License:           GPL-2.0+
- License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- Text Domain:       useragent-changer
- Domain Path:       /languages
+ * Plugin Name:       Default Useragent Changer
+ * Plugin URI:        https://ilanfirsov.me/wordpress/useragent-changer
+ * Description:       Changes default WordPress useragent.
+ * Version:           1.0.0
+ * Author:            Ilan Firsov
+ * Author URI:        https://ilanfirsov.me/
+ * License:           GPLv2 or later
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       useragent-changer
+ * Domain Path:       /languages
+ */
+
+/*
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
 /**
