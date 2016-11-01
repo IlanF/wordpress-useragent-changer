@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: useragent-changer\n"
 "POT-Creation-Date: 2016-07-25 12:27+0300\n"
-"PO-Revision-Date: 2016-07-25 12:29+0300\n"
+"PO-Revision-Date: 2016-11-01 15:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
@@ -18,10 +18,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: inforall-user-agent-changer.php:55
+#: firsov-user-agent-changer.php:55
 msgid "Default Useragent"
 msgstr "Useragent ברירת מחדל"
 
-#: inforall-user-agent-changer.php:78
+#: firsov-user-agent-changer.php:78
 msgid "Override WordPress default useragent for HTTP requests."
 msgstr "דורס את ה- Useragent ברירת המחדל של וורדפרס לבקשות HTTP."
