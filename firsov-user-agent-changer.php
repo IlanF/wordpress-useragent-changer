@@ -1,11 +1,11 @@
 <?php
 /*
  * Plugin Name:       Default Useragent Changer
- * Plugin URI:        https://ilanfirsov.me/wordpress/useragent-changer
+ * Plugin URI:        https://www.ilanfirsov.me/wordpress/useragent-changer
  * Description:       Allows to set a custom useragent and override the default one WordPress is using for HTTP requests.
  * Version:           1.0.0
  * Author:            Ilan Firsov
- * Author URI:        https://ilanfirsov.me/
+ * Author URI:        https://www.ilanfirsov.me/
  * License:           GPLv2 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       useragent-changer
@@ -29,9 +29,9 @@
  */
 
 /**
- * Inforall_User_Agent_Changer
+ * Firsov_User_Agent_Changer
  */
-final class Inforall_User_Agent_Changer {
+final class Firsov_User_Agent_Changer {
 
 	/**
 	 * Inforall_User_Agent_Changer constructor
@@ -84,7 +84,7 @@ final class Inforall_User_Agent_Changer {
 	 */
 	public function register_settings() {
     	add_settings_section(
-	        'inforall_user_agent_changer',
+	        'firsov_user_agent_changer',
 	        '',
 	        '__return_false',
 	        'general'
@@ -94,7 +94,7 @@ final class Inforall_User_Agent_Changer {
 	        __( 'Default Useragent', 'useragent-changer' ),
 	        array( $this, 'textbox_callback' ),
 	        'general',
-	        'inforall_user_agent_changer',
+	        'firsov_user_agent_changer',
 	        array( 'custom_default_http_useragent' )
 	    );
 		register_setting('general','custom_default_http_useragent', 'esc_attr');
@@ -117,4 +117,4 @@ final class Inforall_User_Agent_Changer {
     	printf( '<p class="description">%s</p>', __( 'Override WordPress default useragent for HTTP requests.', 'useragent-changer' ) );
     }
 }
-new Inforall_User_Agent_Changer();
+return new Firsov_User_Agent_Changer();

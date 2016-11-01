@@ -15,7 +15,7 @@ Sometimes the default useragent WordPress is using will not work for you. Either
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/inforall-user-agent-changer` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/firsov-user-agent-changer` directory, or install the plugin through the WordPress plugins screen directly.
 1. Activate the plugin through the 'Plugins' screen in WordPress
 1. Configure the required useragent string at Settings->General screen or leave it blank to restore the default useragent
 
