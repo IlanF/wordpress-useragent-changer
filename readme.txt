@@ -1,8 +1,8 @@
 === Default Useragent Changer ===
-Contributors: ilanfir
+Contributors: ilanf
 Tags: http, useragent, request, get, post
 Requires at least: 4.0.0
-Tested up to: 4.5.3
+Tested up to: 4.6.1
 Stable tag: trunk
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -21,13 +21,17 @@ Sometimes the default useragent WordPress is using will not work for you. Either
 
 == Frequently Asked Questions ==
 
-= Why bother? =
+= Why should I change my useragent? =
 
-One of the API providers I use had decided to block requests containing 'WordPress' in their useragent string, this forced me to change the useragent to be able to communicate with that particular API.
+For example, one of the API providers I use decided to block requests containing 'WordPress' in their useragent string, this forced me to change the useragent to be able to communicate with that particular API.
 
 = How do I restore the default useragent? =
 
 Leave the useragent field blank when saving the settings. If no useragent string is configured the default useragent will be used.
+
+= Why should I use this plugin when I can use a filter hook? =
+
+While it is perfectly fine to use a filter hook, and this is what happens behind the scene with this plugin, not all users have the know-how to do that. This plugin moves the configuration to a place where it is easy to find and change.
 
 == Screenshots ==
 
