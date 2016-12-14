@@ -73,7 +73,7 @@ final class Firsov_User_Agent_Changer {
 		$custom_ua = get_option( 'custom_default_http_useragent', false );
 
 		if ( $custom_ua !== false && ! empty( $custom_ua ) ) {
-			return $custom_ua;
+			return sanitize_text_field( $custom_ua );
 		}
 
 		return $useragent;
@@ -108,13 +108,13 @@ final class Firsov_User_Agent_Changer {
 
 		$key = 'custom_default_http_useragent';
 		$useragent_str = 'WordPress/' . $wp_version . '; ' . home_url();
-    	$option = get_option( $key );
+    	$option = sanitize_text_field( get_option( $key ) );
     	printf( '<input type="text" class="regular-text code" id="%1$s" name="%1$s" value="%2$s" placeholder="%3$s" />',
     		$key,
     		$option,
     		$useragent_str
     	);
-    	printf( '<p class="description">%s</p>', __( 'Override WordPress default useragent for HTTP requests.', 'useragent-changer' ) );
+    	printf( '<p class="description">%s</p>', esc_html( __( 'Override WordPress default useragent for HTTP requests.', 'useragent-changer' ) ) );
     }
 }
 return new Firsov_User_Agent_Changer();
