@@ -57,7 +57,8 @@ final class Firsov_User_Agent_Changer {
 	 * Register WordPress hooks
 	 */
 	protected function register_hooks() {
-		add_filter( 'http_headers_useragent', array( $this, 'http_headers_useragent' ) );
+        // Hook as early as possible to allow other plugins to change the useragent
+		add_filter( 'http_headers_useragent', array( $this, 'http_headers_useragent' ), 1 );
 
 		if ( is_admin() ) {
 			add_action( 'admin_init', array( $this, 'register_settings' ) );
@@ -97,7 +98,7 @@ final class Firsov_User_Agent_Changer {
 	        'firsov_user_agent_changer',
 	        array( 'custom_default_http_useragent' )
 	    );
-		register_setting('general','custom_default_http_useragent', 'esc_attr');
+		register_setting('general','custom_default_http_useragent', 'sanitize_text_field');
 	}
 
 	/**
