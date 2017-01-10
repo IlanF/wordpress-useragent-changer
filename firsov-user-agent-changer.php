@@ -71,7 +71,7 @@ final class Firsov_User_Agent_Changer {
 	 * @return string
 	 */
 	public function http_headers_useragent( $useragent ) {
-		$custom_ua = get_option( 'custom_default_http_useragent', false );
+		$custom_ua = get_option( 'fuac_http_useragent', false );
 
 		if ( $custom_ua !== false && ! empty( $custom_ua ) ) {
 			return sanitize_text_field( $custom_ua );
@@ -91,14 +91,14 @@ final class Firsov_User_Agent_Changer {
 	        'general'
 	    );
 		add_settings_field(
-	        'custom_default_http_useragent',
+	        'fuac_http_useragent',
 	        __( 'Default Useragent', 'useragent-changer' ),
 	        array( $this, 'textbox_callback' ),
 	        'general',
 	        'firsov_user_agent_changer',
-	        array( 'custom_default_http_useragent' )
+	        array( 'fuac_http_useragent' )
 	    );
-		register_setting('general','custom_default_http_useragent', 'sanitize_text_field');
+		register_setting('general','fuac_http_useragent', 'sanitize_text_field');
 	}
 
 	/**
@@ -107,7 +107,7 @@ final class Firsov_User_Agent_Changer {
 	public function textbox_callback() {
 		global $wp_version;
 
-		$key = 'custom_default_http_useragent';
+		$key = 'fuac_http_useragent';
 		$useragent_str = 'WordPress/' . $wp_version . '; ' . home_url();
     	$option = sanitize_text_field( get_option( $key ) );
     	printf( '<input type="text" class="regular-text code" id="%1$s" name="%1$s" value="%2$s" placeholder="%3$s" />',
