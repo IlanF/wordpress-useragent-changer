@@ -105,8 +105,6 @@ final class Firsov_User_Agent_Changer {
 	 * Render textbox field
 	 */
 	public function textbox_callback() {
-		global $wp_version;
-
 		$key = 'fuac_http_useragent';
 		$useragent_str = 'WordPress/' . get_bloginfo( 'version' ) . '; ' . get_bloginfo( 'url' );
     	$option = sanitize_text_field( get_option( $key ) );

@@ -67,7 +67,7 @@ class Firsov_User_Agent_Changer_Unit_Test extends WP_UnitTestCase {
         $this->setUseragent( '' );
         
         // check that it returned to default
-        $this->assertUseragent( ('WordPress/' . $wp_version . '; ' . home_url()) );
+        $this->assertUseragent( ('WordPress/' . get_bloginfo( 'version' ) . '; ' . get_bloginfo( 'url' )) );
     }
     
     /**
