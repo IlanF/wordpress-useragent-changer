@@ -108,7 +108,7 @@ final class Firsov_User_Agent_Changer {
 		global $wp_version;
 
 		$key = 'fuac_http_useragent';
-		$useragent_str = 'WordPress/' . $wp_version . '; ' . home_url();
+		$useragent_str = 'WordPress/' . get_bloginfo( 'version' ) . '; ' . get_bloginfo( 'url' );
     	$option = sanitize_text_field( get_option( $key ) );
     	printf( '<input type="text" class="regular-text code" id="%1$s" name="%1$s" value="%2$s" placeholder="%3$s" />',
     		$key,
